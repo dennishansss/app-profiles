@@ -1,16 +1,8 @@
-runtime: nodejs16
-
-instance_class: F2
-
-env_variables:
-  # Add your environment variables here
-  VARIABLE_NAME: value
-
-automatic_scaling:
-  target_cpu_utilization: 0.65
-  min_instances: 1
-  max_instances: 10
+runtime: python27
+api_version: 1
+threadsafe: true
 
 handlers:
   - url: /.*
-    script: auto
+    static_files: index.html
+    upload: index.html
