@@ -1,11 +1,11 @@
 runtime: python39
-
 handlers:
-  - url: /static
-    static_dir: static
+  - url: /style.css
+    static_files: /style.css
+    upload: /style.css
+    mime_type: text/css
 
-  - url: /upload
-    script: auto
-
-  - url: /.*
-    script: auto
+  - url: /(.*\.(html|htm))$
+    static_files: /\1
+    upload: /.*\.(html|htm)$
+    mime_type: text/html
