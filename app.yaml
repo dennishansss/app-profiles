@@ -4,5 +4,5 @@ threadsafe: true
 
 handlers:
   - url: /.*
-    static_files: index.html
-    upload: index.html
+    static_files: index.html, style.css
+    upload: index.html, style.css
